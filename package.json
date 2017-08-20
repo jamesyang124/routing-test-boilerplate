@@ -1,0 +1,25 @@
+{
+  "name": "api-compatibility-test-suite",
+  "version": "1.0.0",
+  "description": "test suite for testing API compatibility",
+  "engines": {
+    "node": ">=6.11.2 <7.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testRegex": "(/test/.*|(\\-|/)(test|spec))\\.jsx?$"
+  },
+  "repository": "git@github.com:jamesyang124/api-compatibility-test-suite.git",
+  "author": "James Yang <james_yang@htc.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^20.0.3",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^20.0.4",
+    "node-fetch": "^1.7.2",
+    "regenerator-runtime": "^0.11.0"
+  }
+}
