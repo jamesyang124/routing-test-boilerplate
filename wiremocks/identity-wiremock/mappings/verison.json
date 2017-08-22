@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/version"
+    },
+    "response": {
+        "status": 200,
+        "body": "identity version route path mapped\n"
+    }
+}
