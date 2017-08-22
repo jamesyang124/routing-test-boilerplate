@@ -6,7 +6,7 @@ services:
     build:
       context: ./wiremocks
       args:
-        - WM_VERSION=2.7.1
+        - WIREMOCK_VERSION=2.7.1
     image: wiremock-standalone:2.7.1
     volumes:
       - "./wiremocks/account-wiremock/mappings:/wiremock/mappings"
@@ -17,7 +17,7 @@ services:
     build:
       context: ./wiremocks
       args:
-        - WM_VERSION=2.7.1
+        - WIREMOCK_VERSION=2.7.1
     image: wiremock-standalone:2.7.1
     volumes:
       - "./wiremocks/identity-wiremock/mappings:/wiremock/mappings"
