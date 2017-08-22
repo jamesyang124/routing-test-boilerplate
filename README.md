@@ -3,6 +3,7 @@
 1. install yarn
 2. install nodeJS 6.11.2 LTS
 3. `yarn install`
+4. create `.env` file and define related environment variables
 
 ## Run
 
