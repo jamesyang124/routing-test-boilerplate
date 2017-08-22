@@ -24,6 +24,7 @@
 - node-fetch
 - yarn
 - node 6.11.2 LTS
-- docker
-- wiremock
+- docker 17.03.1-ce
+- wiremock 2.7.1
 - jenkins
+- aws-cli 1.11.120
