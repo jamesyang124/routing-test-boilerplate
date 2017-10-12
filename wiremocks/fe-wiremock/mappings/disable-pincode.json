@@ -1,0 +1,17 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/pin/v2/pin/disable"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json",
+            "Cache-Control": "no-cache"
+        },
+        "jsonBody": {
+          "status": "DISABLED",
+          "message": "GOOD GOOD"
+        }
+    }
+}

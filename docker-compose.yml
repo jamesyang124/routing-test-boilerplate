@@ -1,36 +1,48 @@
 version: '3'
 
 services:
-  account-wiremock:
-    container_name: account-wiremock-instance
+  fe-wiremock:
+    container_name: fe-wiremock-instance
     build:
       context: ./wiremocks
       args:
         - WIREMOCK_VERSION=2.7.1
     image: wiremock-standalone:2.7.1
-    volumes:
-      - "./wiremocks/account-wiremock/mappings:/wiremock/mappings"
-      - "./wiremocks/account-wiremock/files:/wiremock/__files"
-
-  identity-wiremock:
-    container_name: identity-wiremock-instance
-    build:
-      context: ./wiremocks
-      args:
-        - WIREMOCK_VERSION=2.7.1
-    image: wiremock-standalone:2.7.1
-    volumes:
-      - "./wiremocks/identity-wiremock/mappings:/wiremock/mappings"
-      - "./wiremocks/identity-wiremock/files:/wiremock/__files"
-
-  service-gateway:
-    container_name: service-gateway-instance
-    image: ${SG_REPO}:${SG_VERSION}
     ports:
-      - 9080:9080
-    links:
-      - account-wiremock:account-service-instance
-      - identity-wiremock:identity-service-instance
-      #- wiremock:identity-verification-service-instance
-      #- wiremock:identity-security-service-instance
-      #- wiremock:authentication-service-instance
+      - 9999:9999
+    volumes:
+      - "./wiremocks/fe-wiremock/mappings:/wiremock/mappings"
+      - "./wiremocks/fe-wiremock/files:/wiremock/__files"
+#  account-wiremock:
+#    container_name: account-wiremock-instance
+#    build:
+#      context: ./wiremocks
+#      args:
+#        - WIREMOCK_VERSION=2.7.1
+#    image: wiremock-standalone:2.7.1
+#    volumes:
+#      - "./wiremocks/account-wiremock/mappings:/wiremock/mappings"
+#      - "./wiremocks/account-wiremock/files:/wiremock/__files"
+#
+#  identity-wiremock:
+#    container_name: identity-wiremock-instance
+#    build:
+#      context: ./wiremocks
+#      args:
+#        - WIREMOCK_VERSION=2.7.1
+#    image: wiremock-standalone:2.7.1
+#    volumes:
+#      - "./wiremocks/identity-wiremock/mappings:/wiremock/mappings"
+#      - "./wiremocks/identity-wiremock/files:/wiremock/__files"
+#
+#  service-gateway:
+#    container_name: service-gateway-instance
+#    image: ${SG_REPO}:${SG_VERSION}
+#    ports:
+#      - 9080:9080
+#    links:
+#      - account-wiremock:account-service-instance
+#      - identity-wiremock:identity-service-instance
+#      #- wiremock:identity-verification-service-instance
+#      #- wiremock:identity-security-service-instance
+#      #- wiremock:authentication-service-instance

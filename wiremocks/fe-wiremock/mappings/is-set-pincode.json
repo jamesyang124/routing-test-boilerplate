@@ -1,0 +1,16 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/pin/v1/pin/isSet"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json",
+            "Cache-Control": "no-cache"
+        },
+        "jsonBody": {
+          "isSet": true
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/pin/v2/pin/enable"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json",
+            "Cache-Control": "no-cache"
+        },
+        "jsonBody": {
+          "status": "ENABLED",
+          "message": "GOOD GOOD"
+        }
+    }
+}
